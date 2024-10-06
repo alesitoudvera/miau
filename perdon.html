@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de ale pa joha</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #a3c2e0, #f0f0f0);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100px; /* Cambia el tamaño del GIF si es necesario */
+            margin-bottom: 20px; /* Espacio entre el GIF y el título */
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+        .no {
+            background-color: #f44336; /* Rojo */
+            color: white;
+        }
+        .yes:hover {
+            box-shadow: 0 8px 15px rgba(76, 175, 80, 0.5);
+        }
+        .no:hover {
+            box-shadow: 0 8px 15px rgba(244, 67, 54, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="tonton.gif" alt="Descripción del GIF"> <!-- Cambia la ruta del GIF aquí -->
+        <h1>meperd0n as¿</h1>
+        <audio autoplay loop>
+            <source src="miau.mp3" type="audio/mp3">
+        </audio>
+        <div>
+            <button class="yes" id="yesButton">Sí</button>
+            <button class="no" id="noButton">No</button>
+        </div>
+    </div>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        let scale = 1; // Escala inicial
+
+        noButton.addEventListener('click', () => {
+            scale += 0.1; // Incrementa la escala en un 10%
+            yesButton.style.transform = `scale(${scale})`; // Aplica el nuevo tamaño
+        });
+
+        yesButton.addEventListener('click', () => {
+            alert('¡teamo mucho mi amor!'); // Mensaje al hacer clic en "Sí"
+        });
+    </script>
+</body>
+</html>
